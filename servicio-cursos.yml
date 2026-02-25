@@ -1,0 +1,48 @@
+datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ejercicio1?serverTimezone=UTC
+    username: root
+    password: admin123
+
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+springdoc:
+  packages-to-scan: com.ejercicio5.controller
+  paths-to-match: /**
+
+#Instancia1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: instancia1
+
+server:
+  port: 8000
+
+#Instancia2
+#eureka:
+  #client:
+  #service-url:
+  #defaultZone: http://localhost:8761/eureka/
+  #instance:
+  #instance-id: instancia2
+
+  #server:
+  #port: 8080
+
+#Instancia3
+  #eureka:
+    #client:
+      #service-url:
+        #defaultZone: http://localhost:8761/eureka/
+    #instance:
+      #instance-id: instancia3
+
+  #server:
+    #port: 8081
