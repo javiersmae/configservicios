@@ -1,0 +1,14 @@
+springdoc:
+  packages-to-scan: com.ejercicio5.controller
+  paths-to-match: /**
+eureka:
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka/
+    instance:
+      instance-id: instancia
+server:
+    port: 9000
+app:
+  user: user4
+  pass: user4
